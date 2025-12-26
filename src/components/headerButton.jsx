@@ -1,9 +1,9 @@
 import "./headerButton.css"
 
-const HeaderButton = ({laber}) => {
+const HeaderButton = ({label}) => {
   return (
     <>
-      <button onClick={NavigateTo}> {laber}</button>
+      <button className="headerButton" onClick={NavigateTo}> {label}</button>
     </>
   );
 };

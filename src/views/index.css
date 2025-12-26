@@ -1,22 +1,48 @@
 #root {
-   font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-color: rgb(26, 26, 26);
+  background-color: rgb(255, 250, 250);
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+
+.banner .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteiner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(34, 101, 164, 0.329),
+    rgba(34, 101, 164, 0)
+  );
 }
 
 .header {
-  background-color: rgb(95, 95, 95);
-  width: 100%;
-  height: 150px;
+  margin: 40px 100px 0px 100px;
+  background-color: rgb(255, 250, 250);
+  border-radius: 10px;
+  box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.3);
+  height: 120px;
   display: flex;
   justify-content: space-between;
 }
 
-.header .img {
-  height: 110px;
-  margin: 20px 100px;
+.header .logo {
+  height: 80px;
+  margin: 20px 40px;
 }
 
 .header .buttons {
@@ -27,36 +53,70 @@ body {
   margin: 20px 100px;
 }
 
-.banner {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-}
-
-.banner .img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .banner .info {
-  position: absolute;
-  margin: 40px 100px;
+  margin: 50px 100px;
   display: flex;
   justify-content: space-between;
-  gap: 100px;
-}
-
-.carousel {
-  height: 10000px;
+  gap: 10%;
 }
 
 h1 {
   font-family: "Audiowide", sans-serif;
+  color: rgb(255, 250, 250);
+  font-weight: 400;
   font-size: 80px;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 0px;
 }
 
+h3 {
+  color: rgb(255, 250, 250);
+  font-weight: 400;
+  font-size: 25px;
+  margin-top: 0px;
+}
+
+.banner .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
+.Carousel {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.missionVision {
+  margin-top: 350px;
+  background-color: #5c8fb6;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.mission {
+  position: absolute;
+  margin: 0px 100px;
+  display: flex;
+  gap: 100px;
+}
+
+.mission .title {
+  margin-top: 40px;
+  color: white;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.mission .text {
+  color: white;
+  font-size: 20px;
+}
+
+.mission .img {
+  width: 200px;
+  height: 200px;
+  margin: auto 100px;
+}

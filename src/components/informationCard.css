@@ -1,0 +1,23 @@
+.card {
+  height: 310px;
+  width: 250px;
+  background-color: rgb(255, 250, 250);
+  border-radius: 10px;
+  box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+
+.card .img {
+  height: 70px;
+  width: 70px;
+}
+
+.card .title {
+ margin: 80px 0px 20px 0px;
+ font-size: 25px;
+ font-weight: 500;
+}
+
+.card .label {
+  
+}
