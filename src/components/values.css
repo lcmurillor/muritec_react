@@ -1,0 +1,24 @@
+.value {
+  margin: 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+}
+
+.value .title {
+  margin-top: 50px;
+  color: white;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.value .text {
+  color: white;
+  font-size: 20px;
+}
+
+.value .img {
+  width: 200px;
+  height: 150px;
+  margin-top: 60px;
+}

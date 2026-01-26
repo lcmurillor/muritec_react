@@ -88,35 +88,10 @@ h3 {
   justify-content: space-evenly;
 }
 
-.missionVision {
+.values {
   margin-top: 350px;
   background-color: #5c8fb6;
   width: 100%;
-  height: 500px;
-  position: relative;
+  height: 800px;
 }
 
-.mission {
-  position: absolute;
-  margin: 0px 100px;
-  display: flex;
-  gap: 100px;
-}
-
-.mission .title {
-  margin-top: 40px;
-  color: white;
-  font-size: 70px;
-  font-weight: 700;
-}
-
-.mission .text {
-  color: white;
-  font-size: 20px;
-}
-
-.mission .img {
-  width: 200px;
-  height: 200px;
-  margin: auto 100px;
-}

@@ -2,6 +2,7 @@ import "./index.css";
 import HeaderButton from "../components/headerButton";
 import BannerButton from "../components/bannerButton";
 import InformationCard from "../components/informationCard";
+import Values from "../components/values";
 
 const Index = () => {
   return (
@@ -38,7 +39,7 @@ const Index = () => {
               url={"src/assets/pc.png"}
               title={"Computación"}
               label={
-                "Mantenimiento preventivo y correctivo de equipos informáticos como computadoras portatilies, de estritorio,  impresaoras y puntos de venta."
+                "Mantenimiento preventivo y correctivo de equipos informáticos como computadoras portatilies, de estritorio, impresaoras y puntos de venta."
               }
             >
               {" "}
@@ -56,7 +57,7 @@ const Index = () => {
               url={"src/assets/code.png"}
               title={"Programación"}
               label={
-                "Desarrollo de aplicaciones multiplataforma a medida, implementando las tecnologías más populares y solicitada en el mercado actural."
+                "Desarrollo de aplicaciones multiplataforma a medida, implementando las tecnologías más populares y solicitada en el mercado actual."
               }
             >
               {" "}
@@ -64,27 +65,40 @@ const Index = () => {
             <InformationCard
               url={"src/assets/database.png"}
               title={"Bases de datos"}
-              label={""}
+              label={
+                "Diseño, implementación y mantenimiento de bases de datos, optimizadas para garantizar seguridad, rendimiento y disponibilidad en entornos locales y en la nube."
+              }
             >
               {" "}
             </InformationCard>
           </div>
         </div>
       </div>
-      <div className="missionVision">
-        <div className="mission">
-          <div>
-            <div className="title">Misión</div>
-          <div className="text">
-            Ofrecer servicios orientados en las Tecnológicas de la Información,
-            los cuales se puedan ajustar a las necesidades de cualquier tipo de
-            cliente. Con nuestro equipo situado en el Cantón de Tilarán,
-            buscamos ayudar a las personas de nuestra comunidad, instruyéndolos
-            acerca de la tecnología y como innovarse.
-          </div>
-          </div>
-           <img src="src/assets/pc.png" className="img"></img>
-        </div>
+      <div className="values">
+        <Values
+          url={"src/assets/target.svg"}
+          title={"Misión"}
+          label={
+            "Brindar servicios en Tecnologías de la Información adaptados a las necesidades de cada cliente, apoyando desde Tilarán el desarrollo tecnológico y la innovación en nuestra comunidad."
+          }
+           marginRight = {"100px"}
+        ></Values>
+         <Values
+          url={"src/assets/idea.svg"}
+          title={"Visión"}
+          label={
+            "Consolidarnos como un proveedor confiable de servicios informáticos integrales, reconocido por la calidad, la innovación y el compromiso con cada cliente."
+          }
+           marginRight = {"100px"}
+        ></Values>
+         <Values
+          url={"src/assets/value.svg"}
+          title={"Valores"}
+          label={
+            " Honestidad. Transparencia. Calidad. Seguridad. Empatía. Creatividad."
+          }
+          marginRight = {"75px"}
+        ></Values>
       </div>
     </>
   );
