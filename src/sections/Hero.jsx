@@ -44,7 +44,7 @@ export default function Hero() {
           Atención personal
         </p>
       </div>
-      <div className="hero-visual">
+      <figure className="hero-visual">
         <div className="hero-image-wrap">
           <img
             className="hero-image"
@@ -61,17 +61,11 @@ export default function Hero() {
           <span>MuriTEC / EN CADA DETALLE</span>
           <span>TILARÁN / CR</span>
         </div>
-        <div className="hero-caption">
-          <span className="caption-icon">
-            <Icon name="computer" size={27} />
-          </span>
-          <div>
-            <span>DE VUELTA A LO QUE IMPORTA</span>
-            <strong>Tu tecnología, en buenas manos.</strong>
-          </div>
-          <Icon name="diagonal" size={25} />
-        </div>
-      </div>
+        <figcaption className="hero-caption">
+          <span>DE VUELTA A LO QUE IMPORTA</span>
+          <strong>Tu tecnología, en buenas manos.</strong>
+        </figcaption>
+      </figure>
     </section>
   );
 }
