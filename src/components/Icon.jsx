@@ -1,4 +1,11 @@
 const paths = {
+  server: (
+    <>
+      <rect x="3" y="3" width="18" height="7" rx="2" />
+      <rect x="3" y="14" width="18" height="7" rx="2" />
+      <path d="M7 6.5h.01M7 17.5h.01M11 6.5h6M11 17.5h6" />
+    </>
+  ),
   arrow: <path d="M5 12h14m-6-6 6 6-6 6" />,
   diagonal: <path d="M6 18 18 6M6 6h12v12" />,
   down: <path d="m6 9 6 6 6-6" />,

@@ -1,5 +1,5 @@
 import Icon from "../components/Icon";
-import { contact, whatsappUrl } from "../data/site";
+import { contact, emailUrl } from "../data/site";
 
 export default function Contact() {
   return (
@@ -17,15 +17,15 @@ export default function Contact() {
             ¿Una idea por construir?
           </h2>
           <p>
-            Cuéntanos qué necesitas. Encontraremos contigo el siguiente paso.
+            Cuéntanos qué necesitas. En Muritec encontrarás orientación para dar el siguiente paso.
           </p>
           <a
             className="button button-light"
-            href={whatsappUrl()}
+            href={emailUrl()}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Icon name="chat" /> Escríbenos por WhatsApp{" "}
+            <Icon name="mail" /> Contáctanos por correo{" "}
             <Icon name="diagonal" size={18} />
           </a>
           <p className="contact-location">
@@ -43,14 +43,6 @@ export default function Contact() {
               <span>
                 <small>Correo electrónico</small>
                 {contact.email}
-              </span>
-              <Icon name="diagonal" size={18} />
-            </a>
-            <a href={`tel:${contact.telephone}`}>
-              <Icon name="phone" />
-              <span>
-                <small>Teléfono</small>
-                {contact.phone}
               </span>
               <Icon name="diagonal" size={18} />
             </a>

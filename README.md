@@ -42,14 +42,14 @@ public/
 - Textos de portada y presentación: `src/sections/Hero.jsx` y `About.jsx`.
 - Colores, tamaños y espaciado: variables y capas en `src/styles/global.css`.
 - Añade fotografías en `public/images` con sufijos `-small.webp` y `-large.webp`; agrega sus nombres sin sufijo a `projects`.
-- El contacto usa enlaces reales de WhatsApp, `mailto:` y `tel:`. No hay formulario ni envío simulado. La versión fuente de Flutter ya había sustituido su antiguo formulario por estos enlaces.
+- Las consultas usan enlaces de correo a lcmurillor.dev@gmail.com. No se publica un teléfono ni se ofrecen enlaces de WhatsApp. No hay formulario ni envío simulado.
 
 ## Decisiones de la migración
 
 - Una sola página con enlaces a secciones: menos navegación, sin librería de rutas.
-- Se conservan los cuatro servicios del proyecto React, la misión, visión, valores y las cinco galerías del proyecto Flutter completo.
+- Se conservan cinco áreas de servicio actualizadas, la misión, visión, valores y cinco apartados de cuidado de equipos con fotografías ilustrativas de Pexels.
 - Fotos originales optimizadas a WebP; carga diferida fuera de la portada y tamaños reservados para evitar saltos.
-- La galería se carga bajo demanda; utiliza `dialog` nativo, navegación por teclado, Escape y devolución del foco.
+- El detalle de cada servicio se carga bajo demanda; utiliza `dialog` nativo, Escape y devolución del foco.
 - HTML semántico, menú móvil, foco visible, enlace para saltar al contenido y respeto a movimiento reducido.
 - Fuentes del sistema: sin descargas de Google Fonts ni peticiones de terceros al cargar la página.
 - Metadatos en español e icono propio. No se inventan métricas, testimonios ni clientes.
@@ -69,3 +69,7 @@ No hay registro nuevo de service worker, manifiesto instalable, caché offline n
 ### Alojamiento IIS existente
 
 La publicación Flutter contiene un web.config con una regla de proxy para /cloud. Conserva ese archivo y esa regla en el servidor; la nueva web no los reemplaza. Verifica que IIS sirva .webp como image/webp y .svg como image/svg+xml. Configura Cache-Control: no-cache para index.html y flutter_service_worker.js durante la migración.
+
+## Actualización de contenido — septiembre 2026
+
+Muritec se presenta como un negocio de soluciones tecnológicas, con una voz centrada en la marca. Los datos de Luis Carlos se mantienen en la sección de contacto. Se actualizan programación y datos, y se incorpora servidores e infraestructura (Debian, proxies inversos, alojamiento web y NAS). Las imágenes de los apartados finales son ilustrativas; fuentes y licencia en CREDITOS-IMAGENES.md. Sus originales anteriores permanecen en src/assets. Esta revisión se compila localmente y requiere volver a publicar dist para aparecer en el dominio.

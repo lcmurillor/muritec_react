@@ -1,5 +1,5 @@
 import Icon from "../components/Icon";
-import { imageUrl, whatsappUrl } from "../data/site";
+import { imageUrl, emailUrl } from "../data/site";
 
 export default function Hero() {
   return (
@@ -23,13 +23,13 @@ export default function Hero() {
           </span>
         </h1>
         <p className="hero-description">
-          Cuidamos tus equipos, conectamos tu negocio y damos forma a tus ideas.
-          Soluciones informáticas con un trato cercano, desde Tilarán.
+          Cuidado de equipos, conectividad y desarrollo de soluciones a tu
+          medida. Soluciones informáticas con un trato cercano, desde Tilarán.
         </p>
         <div className="hero-actions">
           <a
             className="button"
-            href={whatsappUrl()}
+            href={emailUrl()}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -41,7 +41,7 @@ export default function Hero() {
         </div>
         <p className="location">
           <Icon name="pin" size={17} /> Tilarán, Costa Rica <span>·</span>{" "}
-          Atención personal
+          Atención personalizada
         </p>
       </div>
       <figure className="hero-visual">

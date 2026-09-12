@@ -1,14 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Icon from "./Icon";
-import { imageUrl, whatsappUrl } from "../data/site";
+import { imageUrl, emailUrl } from "../data/site";
 
 export default function ProjectGallery({ project, onClose }) {
   const dialogRef = useRef(null);
-  const [index, setIndex] = useState(0);
-  const total = project.images.length;
-  const move = (direction) =>
-    setIndex((current) => (current + direction + total) % total);
-
   useEffect(() => {
     const dialog = dialogRef.current;
     const previousOverflow = document.body.style.overflow;
@@ -19,7 +14,6 @@ export default function ProjectGallery({ project, onClose }) {
       document.body.style.overflow = previousOverflow;
     };
   }, []);
-
   return (
     <dialog
       ref={dialogRef}
@@ -33,23 +27,13 @@ export default function ProjectGallery({ project, onClose }) {
       onClick={(event) => {
         if (event.target === event.currentTarget) onClose();
       }}
-      onKeyDown={(event) => {
-        if (event.key === "ArrowRight") {
-          event.preventDefault();
-          move(1);
-        }
-        if (event.key === "ArrowLeft") {
-          event.preventDefault();
-          move(-1);
-        }
-      }}
     >
       <div className="gallery-body">
         <div className="gallery-heading">
-          <p className="eyebrow">NUESTROS TRABAJOS</p>
+          <p className="eyebrow">CUIDADO DE TU EQUIPO</p>
           <button
             className="icon-button"
-            aria-label="Cerrar galería"
+            aria-label="Cerrar detalle"
             onClick={onClose}
           >
             <Icon name="close" />
@@ -57,59 +41,35 @@ export default function ProjectGallery({ project, onClose }) {
         </div>
         <div className="gallery-image">
           <img
-            src={imageUrl(project.images[index])}
-            alt={`${project.category}, fotografía ${index + 1} de ${total}`}
+            src={imageUrl(project.images[0])}
+            alt={project.imageAlt}
             width="1400"
             height="1050"
           />
-          <button
-            className="icon-button gallery-previous"
-            aria-label="Fotografía anterior"
-            onClick={() => move(-1)}
-          >
-            <Icon name="arrow" />
-          </button>
-          <button
-            className="icon-button gallery-next"
-            aria-label="Fotografía siguiente"
-            onClick={() => move(1)}
-          >
-            <Icon name="arrow" />
-          </button>
         </div>
+        <p className="image-credit">
+          Imagen ilustrativa ·{" "}
+          <a
+            href={project.imageSource}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {project.imageCredit} / Pexels
+          </a>
+        </p>
         <div className="gallery-caption">
           <h2 id="gallery-title">{project.category}</h2>
-          <span role="status" aria-live="polite">
-            {index + 1} / {total}
-          </span>
         </div>
         <p id="gallery-description">{project.description}</p>
-        <div className="gallery-thumbnails" aria-label="Elegir fotografía">
-          {project.images.map((image, photoIndex) => (
-            <button
-              key={image}
-              aria-label={`Ver fotografía ${photoIndex + 1}`}
-              aria-pressed={photoIndex === index}
-              onClick={() => setIndex(photoIndex)}
-            >
-              <img
-                src={imageUrl(image, "small")}
-                alt=""
-                width="80"
-                height="60"
-              />
-            </button>
-          ))}
-        </div>
         <a
-          className="text-link"
-          href={whatsappUrl(
+          className="text-link service-contact"
+          href={emailUrl(
             `Hola, me gustaría consultar sobre ${project.category.toLowerCase()}.`,
           )}
           target="_blank"
           rel="noopener noreferrer"
         >
-          Consultar por un trabajo similar <Icon name="diagonal" size={18} />
+          Consultar este servicio <Icon name="diagonal" size={18} />
         </a>
       </div>
     </dialog>

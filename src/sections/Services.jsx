@@ -1,5 +1,5 @@
 import Icon from "../components/Icon";
-import { services, whatsappUrl } from "../data/site";
+import { services, emailUrl } from "../data/site";
 
 export default function Services() {
   return (
@@ -20,7 +20,7 @@ export default function Services() {
           </div>
           <p>
             Del equipo que usas cada día a la idea que quieres hacer realidad.
-            Te acompañamos en cada paso.
+            Atención directa para encontrar lo que mejor se adapta a ti.
           </p>
         </div>
         <div className="services-grid">
@@ -42,7 +42,7 @@ export default function Services() {
                   ))}
                 </ul>
                 <a
-                  href={whatsappUrl(
+                  href={emailUrl(
                     `Hola, me interesa el servicio de ${service.title.toLowerCase()}.`,
                   )}
                   target="_blank"

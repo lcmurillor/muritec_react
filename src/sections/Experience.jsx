@@ -22,16 +22,16 @@ export default function Experience() {
       <div className="container">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">03 / EXPERIENCIA EN ACCIÓN</p>
+            <p className="eyebrow">03 / CUIDADO Y MEJORA DE EQUIPOS</p>
             <h2 id="experience-title">
-              Menos palabras.
+              Tu equipo, preparado
               <br />
-              Más soluciones reales.
+              para seguir.
             </h2>
           </div>
           <p>
-            Una mirada a nuestros trabajos de mantenimiento, actualización y
-            cuidado de equipos.
+            Soluciones de mantenimiento y actualización para aprovechar mejor tu
+            computadora. Fotografías ilustrativas de cada servicio.
           </p>
         </div>
         <div className="projects-grid">
@@ -46,21 +46,25 @@ export default function Experience() {
                   returnFocusRef.current = event.currentTarget;
                   setSelected(project);
                 }}
-                aria-label={`Ver galería: ${project.category}`}
+                aria-label={`Ver detalle: ${project.category}`}
                 aria-haspopup="dialog"
               >
                 <div className="project-image">
                   <img
                     src={imageUrl(project.images[0], "small")}
-                    alt={project.category}
+                    srcSet={`${imageUrl(project.images[0], "small")} 640w, ${imageUrl(project.images[0])} 1400w`}
+                    sizes={
+                      index === 0 || index === 3
+                        ? "(max-width: 760px) 100vw, 65vw"
+                        : "(max-width: 480px) 100vw, 35vw"
+                    }
+                    alt={project.imageAlt}
                     width="640"
                     height="480"
                     loading="lazy"
                     decoding="async"
                   />
-                  <span className="project-count">
-                    {project.images.length} fotografías
-                  </span>
+                  <span className="project-count">Ver detalle</span>
                   <span className="project-arrow">
                     <Icon name="diagonal" />
                   </span>

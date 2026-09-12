@@ -40,20 +40,23 @@ export default function About() {
             </div>
           </div>
           <div className="about-copy">
-            <p className="eyebrow">02 / DETRÁS DE MURITEC</p>
+            <p className="eyebrow">02 / SOBRE MURITEC</p>
             <h2 id="about-title">
               La tecnología es mejor
               <br />
               cuando es cercana.
             </h2>
             <p>
-              Somos un equipo multidisciplinario enfocado en las tecnologías de
-              información. Creemos en escuchar primero y encontrar la solución
-              que realmente se ajusta a cada persona.
+              Muritec ofrece soluciones tecnológicas para personas, hogares y
+              negocios. Sus servicios combinan computación, redes, desarrollo
+              de software, bases de datos e infraestructura para resolver
+              necesidades concretas y facilitar el trabajo de cada día.
             </p>
             <p>
-              Desde Tilarán, acompañamos a nuestra comunidad para que pueda
-              aprovechar la tecnología, resolver sus retos e innovar.
+              Desde Tilarán, Muritec apuesta por una atención cercana, asesoría
+              clara y soluciones adaptadas a cada proyecto. El objetivo es que
+              cada cliente pueda aprovechar la tecnología con confianza y contar
+              con opciones que respondan a sus necesidades.
             </p>
             <a className="text-link" href="#contacto">
               Conversemos sobre tu proyecto <Icon name="diagonal" size={18} />
@@ -63,7 +66,7 @@ export default function About() {
         <div className="principles">
           <article>
             <span className="principle-number">01</span>
-            <h3>Nuestra misión</h3>
+            <h3>Propósito</h3>
             <p>
               Brindar servicios de tecnologías de información adaptados a cada
               cliente e impulsar el desarrollo tecnológico de nuestra comunidad.
@@ -71,7 +74,7 @@ export default function About() {
           </article>
           <article>
             <span className="principle-number">02</span>
-            <h3>Nuestra visión</h3>
+            <h3>Visión</h3>
             <p>
               Ser un referente en soluciones tecnológicas y desarrollo de
               software, creando oportunidades para jóvenes de zonas rurales.
@@ -79,7 +82,7 @@ export default function About() {
           </article>
           <article>
             <span className="principle-number">03</span>
-            <h3>Lo que nos define</h3>
+            <h3>Valores</h3>
             <ul className="values-list">
               {values.map((value) => (
                 <li key={value}>

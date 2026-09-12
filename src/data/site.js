@@ -1,10 +1,7 @@
 export const contact = {
   name: "Luis Carlos Murillo Rosales",
   role: "Ingeniero en Tecnologías de Información",
-  email: "lcmurillor@hotmail.com",
-  phone: "+506 8890-0888",
-  telephone: "+50688900888",
-  whatsapp: "https://wa.me/50688900888",
+  email: "lcmurillor.dev@gmail.com",
   location: "Tilarán, Costa Rica",
 };
 
@@ -15,7 +12,7 @@ export const socialLinks = [
 
 export const navigation = [
   { label: "Servicios", href: "#servicios" },
-  { label: "Nosotros", href: "#nosotros" },
+  { label: "Sobre Muritec", href: "#nosotros" },
   { label: "Experiencia", href: "#experiencia" },
 ];
 
@@ -52,12 +49,13 @@ export const services = [
     icon: "code",
     title: "Programación",
     description:
-      "Tus ideas, convertidas en soluciones. Sitios web y aplicaciones a la medida de lo que necesitas.",
+      "Sitios web y aplicaciones a medida, fáciles de usar y optimizados para las necesidades de tu proyecto.",
     items: [
-      "Desarrollo web y aplicaciones multiplataforma",
-      "Diseño de interfaces y experiencia de usuario",
-      "Trabajo colaborativo con GitHub",
-      "Metodologías Scrum y Design Thinking",
+      "Interfaces adaptables a móviles, tabletas y computadoras",
+      "Soluciones a medida para simplificar tareas y procesos",
+      "Optimización de tiempos de carga y uso de recursos",
+      "Pruebas, validaciones y control de errores para mejorar la calidad",
+      "Tecnologías actuales y lenguajes de uso extendido para facilitar el mantenimiento",
     ],
   },
   {
@@ -65,12 +63,27 @@ export const services = [
     icon: "database",
     title: "Bases de datos",
     description:
-      "Información organizada para trabajar mejor. Diseño y gestión de bases de datos para tus proyectos.",
+      "Organiza y aprovecha tu información con bases de datos relacionales y no relacionales adaptadas a tu proyecto.",
     items: [
-      "Diseño de bases de datos relacionales",
-      "Implementación y gestión con Microsoft SQL Server",
-      "Mantenimiento y optimización del rendimiento",
-      "Seguridad y disponibilidad de la información",
+      "Diseño y organización de datos según las necesidades del negocio",
+      "Gestión de SQL Server, Oracle Database, MariaDB, MySQL y PostgreSQL",
+      "Soluciones con bases de datos no relacionales según el tipo de información",
+      "Optimización de consultas, mantenimiento y gestión de accesos",
+      "Administración con Oracle SQL Developer, SQL Server Management Studio y pgAdmin",
+    ],
+  },
+  {
+    id: "infraestructura",
+    icon: "server",
+    title: "Servidores e infraestructura",
+    description:
+      "Un entorno organizado para alojar tu web, ejecutar servicios y gestionar los archivos de tu hogar o negocio.",
+    items: [
+      "Instalación, configuración y administración de servidores Linux con Debian",
+      "Alojamiento y puesta en marcha de páginas y servicios web",
+      "Configuración de proxies inversos para dirigir el tráfico a cada servicio",
+      "Gestión de NAS, almacenamiento compartido y permisos de acceso",
+      "Mantenimiento, actualizaciones y copias de seguridad de servidores y archivos",
     ],
   },
 ];
@@ -81,8 +94,12 @@ export const projects = [
     title: "Cuidar cada componente.",
     category: "Mantenimiento de hardware",
     description:
-      "Limpieza profunda, revisión y sustitución de componentes en equipos de escritorio y portátiles. Trabajamos tanto con repuestos proporcionados por el cliente como con componentes nuevos a medida.",
-    images: ["PC_Escritorio3", "Equipo_DVR", "PC_Portatil9"],
+      "Limpieza profunda, revisión y sustitución de componentes en equipos de escritorio y portátiles. Instalación de repuestos proporcionados por el cliente o de componentes nuevos elegidos según sus necesidades.",
+    images: ["service-hardware"],
+    imageAlt:
+      "Revisión de componentes de una computadora en un banco de trabajo",
+    imageCredit: "Tima Miroshnichenko",
+    imageSource: "https://www.pexels.com/photo/man-fixing-a-computer-6754846/",
   },
   {
     id: "componentes",
@@ -90,7 +107,11 @@ export const projects = [
     category: "Venta de componentes",
     description:
       "Venta de componentes para computadoras y equipos de red. Instalación de unidades de estado sólido y clonación del disco anterior para actualizar el equipo conservando su información.",
-    images: ["Hardware1", "Hardware2", "Hardware3"],
+    images: ["service-componentes"],
+    imageAlt: "Módulos de memoria y procesadores para computadoras",
+    imageCredit: "Andrey Matveev",
+    imageSource:
+      "https://www.pexels.com/photo/studio-shot-of-various-modern-ram-sticks-and-cpus-6373758/",
   },
   {
     id: "software",
@@ -98,7 +119,11 @@ export const projects = [
     category: "Mantenimiento de software",
     description:
       "Instalación de sistemas operativos y aplicaciones con licencias oficiales, copias de seguridad, recuperación de archivos y actualización de software y controladores.",
-    images: ["PC_Portatil10", "PC_Portatil3", "PC_Bios1"],
+    images: ["service-software"],
+    imageAlt: "Trabajo con aplicaciones en una computadora y un portátil",
+    imageCredit: "Christina Morillo",
+    imageSource:
+      "https://www.pexels.com/photo/person-using-both-computer-and-a-laptop-1181673/",
   },
   {
     id: "temperatura",
@@ -106,7 +131,11 @@ export const projects = [
     category: "Cambio de pasta térmica",
     description:
       "Cambio de pasta y almohadillas térmicas en equipos portátiles y de escritorio. Limpieza del sistema de refrigeración con las herramientas adecuadas para cuidar la temperatura del equipo.",
-    images: ["PC_Portatil8", "PC_Portatil20", "PC_Portatil19"],
+    images: ["service-temperatura"],
+    imageAlt: "Sistema de refrigeración de una computadora",
+    imageCredit: "Ron Lach",
+    imageSource:
+      "https://www.pexels.com/photo/close-up-shot-of-a-computer-cooler-7858767/",
   },
   {
     id: "actualizacion",
@@ -114,12 +143,15 @@ export const projects = [
     category: "Actualización de hardware",
     description:
       "Ampliación de memoria RAM y almacenamiento, sustitución de discos y adaptación de bahías de almacenamiento. Mejoras elegidas según las características y necesidades de cada equipo.",
-    images: ["PC_Caddy1", "PC_Caddy2", "PC_Portatil7"],
+    images: ["service-actualizacion"],
+    imageAlt: "Intervención en los componentes internos de un portátil",
+    imageCredit: "IT services EU",
+    imageSource: "https://www.pexels.com/photo/a-man-fixing-a-laptop-7639370/",
   },
 ];
 
 export const imageUrl = (name, size = "large") =>
   `${import.meta.env.BASE_URL}images/${name}-${size}.webp`;
-export const whatsappUrl = (
+export const emailUrl = (
   message = "Hola, me gustaría consultar sobre los servicios de Muritec.",
-) => `${contact.whatsapp}?text=${encodeURIComponent(message)}`;
+) => `mailto:${contact.email}?subject=${encodeURIComponent("Consulta sobre servicios de Muritec")}&body=${encodeURIComponent(message)}`;
